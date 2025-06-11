@@ -2,10 +2,11 @@ import '../../models/article_model.dart';
 
 class NewsStates{}
 
-class InitialStates extends NewsStates{}
-class NewsLoadedStates extends NewsStates{
-  final List<ArticleModel> articles;
+class NewsLoadingStates extends NewsStates{}
 
-  NewsLoadedStates(this.articles);
+class NewsSuccessStates extends NewsStates{
+  final List<ArticleModel> articles;
+  NewsSuccessStates(this.articles);
 }
+
 class NewsFailureStates extends NewsStates{}

@@ -6,29 +6,26 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Center(
-        child: Row(
-            children: [
-              Text(
-                'News ',
-                style: TextStyle(
-                  color: Colors.black, // Color for "News"
-                  fontWeight: FontWeight.bold, // Optional: Make the text bold
-                  fontSize: 20, // Optional: Adjust the font size
-                ),
-              ),
-              Text(
-                'Paper',
-                style: TextStyle(
-                  color: Colors.yellow, // Color for "Paper"
-                  fontWeight: FontWeight.bold, // Optional: Make the text bold
-                  fontSize: 20, // Optional: Adjust the font size
-                ),
-              ),
-            ],
-        ),
+      scrolledUnderElevation: 0,
+      centerTitle: true,
+      title: RichText(
+        text: const TextSpan(children: [
+          TextSpan(
+              text: 'News',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+                fontSize: 20,
+              )),
+          TextSpan(
+              text: 'Cloud',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.yellow,
+                fontSize: 20,
+              ))
+        ]),
       ),
-      centerTitle: true, // Centers the title within the AppBar
     );
   }
 }

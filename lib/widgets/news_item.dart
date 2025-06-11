@@ -27,7 +27,7 @@ class NewsItem extends StatelessWidget {
             articleModel.title,
             overflow: TextOverflow.ellipsis,
             maxLines: 2,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 20,
             ),
@@ -36,7 +36,7 @@ class NewsItem extends StatelessWidget {
               articleModel.subTitle?? '',
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 12,
                 color: Colors.grey,
